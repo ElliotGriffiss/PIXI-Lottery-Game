@@ -30,7 +30,6 @@ function GenerateFromDirectory(Directory) {
 
 GenerateFromDirectory('src/Assets');
 
-
 fs.writeFile("src/AssetManifest.json", JSON.stringify( {bundles}, null, 4
 ),function(err) {
     if (err) {

@@ -50,7 +50,7 @@ module.exports = {
             patterns: [
                 {
                     from: "src/Assets",
-                    to: "assets",
+                    to: "Assets",
                     globOptions: {
                         ignore: [
                             '**/src/Assets/fonts',

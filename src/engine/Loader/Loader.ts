@@ -11,6 +11,8 @@ class Loader {
 
     async _preload(): Promise<void> {
         await Assets.init({manifest: AssetsManifest});
+        console.log(AssetsManifest);
+        console.log(global.preload);
         global.preload = await Assets.loadBundle("preload");
     }
 
@@ -18,6 +20,7 @@ class Loader {
         this._loadingScreen = new LoadingScreen();
         global.app.stage.addChild(this._loadingScreen);
     }
+
     async load(): Promise<void> {
         await Promise.all( [
             global.game = await Assets.loadBundle("game", (progress)=> {
@@ -51,6 +54,5 @@ class Loader {
         this._loadingScreen.destroy();
     }
 }
-
 
 export default Loader;

@@ -7,11 +7,14 @@ class LoadingScreen extends Container {
 
     constructor() {
         super();
+        console.log(global.preload);
+
         this._bar = new Bar({
             maxWidth: 145,
             height: 5
         });
         this._bar.position = {x:168, y:177.5};
+
 
         const backgroundSprite = Sprite.from(global.preload.LoadingScreen);
         const loadingBarBackground = Sprite.from(global.preload.LoadingBarBackground);
