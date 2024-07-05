@@ -1,6 +1,6 @@
-# PIXI-Template
+# PIXI-Lottery-Game
 
-A Pixi.js, TypeScript, webpack bunder to help you get started quicker.
+A Pixi.js Lottery game.
 
 ## Setup
 
