@@ -3,6 +3,7 @@ import {sound} from '@pixi/sound';
 import gsap from "gsap";
 
 import Background from "./Components/Background/Background";
+import CreditPanel from "./Components/CreditPanel/CreditPanel";
 import SpinButton from "./Components/SpinButton/SpinButton";
 import ResetButton from "./Components/ResetButton/ResetButton";
 import RandomButton from "./Components/RandomButton/RandomButton";
@@ -10,14 +11,18 @@ import RandomButton from "./Components/RandomButton/RandomButton";
 import settings from './app.json';
 
 class Game extends Container {
+    private readonly _creditPanel: CreditPanel = null;
     private readonly _spinButton: SpinButton = null;
     private readonly _resetButton: ResetButton = null;
     private readonly _randomButton: RandomButton = null;
+
+    private _credit: number = settings.startingCredit;
 
     constructor() {
         super();
 
         const background = new Background();
+        this._creditPanel = new CreditPanel(this._credit);
 
         this._spinButton = new SpinButton(()=> {this._onSpinButtonPressed()});
         this._resetButton = new ResetButton( ()=> {this._onResetButtonPressed()});
@@ -25,6 +30,7 @@ class Game extends Container {
 
         this.addChild(
             background,
+            this._creditPanel,
             this._spinButton,
             this._resetButton,
             this._randomButton
