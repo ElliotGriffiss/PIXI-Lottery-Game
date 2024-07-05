@@ -17,8 +17,8 @@ export class PixiAppManager {
             resolution: window.devicePixelRatio || 1,
             autoDensity: true,
             backgroundColor: "#000000",
-            width: 480,
-            height: 320,
+            width: 960,
+            height: 540,
         });
 
         global.app = app;
