@@ -7,7 +7,7 @@ class SpinButton extends Button {
             pressed: global.game.SpinButton_Pressed,
             inactive: global.game.SpinButton_Inactive
         });
-        this.x = 585;
+        this.x = 779;
         this.y = 472;
     }
 }

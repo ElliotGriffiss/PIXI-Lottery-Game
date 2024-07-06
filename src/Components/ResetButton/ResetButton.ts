@@ -7,8 +7,8 @@ class ResetButton extends Button {
             pressed: global.game.ResetButton_Pressed,
             inactive: global.game.ResetButton_Inactive
         });
-        this.x = 774;
-        this.y = 91;
+        this.x = 229;
+        this.y = 472;
     }
 }
 

@@ -6,7 +6,7 @@ class CreditPanel extends Container {
     constructor(startingCredit: number) {
         super();
         this.x = 478;
-        this.y = 492;
+        this.y = 494;
 
         this._text = new Text({ text: '£5.00', style: {
                 fontFamily: 'minecraft-webfont',
